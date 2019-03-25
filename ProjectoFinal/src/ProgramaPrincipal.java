@@ -6,11 +6,21 @@ public class ProgramaPrincipal {
         ArrayList<Plataforma> plataformas1 = new ArrayList<Plataforma>();
         plataformas1.add(Plataforma.XBOXONE);
         plataformas1.add(Plataforma.PS4);
+        
+        ArrayList<Categoria> categorias1 = new ArrayList<Categoria>();
+        categoria1.add(Categoria.ACCION);
+        categoria1.add(Categoria.AVENTURAS);
+        categoria1.add(Categoria.MMO);
 
         ArrayList<Plataforma> plataformas2 = new ArrayList<Plataforma>();
         plataformas2.add(Plataforma.PS3);
         plataformas2.add(Plataforma.PC);
 
+        ArrayList<Categoria> categorias2 = new ArrayList<Categoria>();
+        categoria2.add(Categoria.RPG);
+        categoria2.add(Categoria.);
+        categoria2.add(Categoria.MMO);
+        
         ArrayList<Plataforma> plataformas3 = new ArrayList<Plataforma>();
         plataformas3.add(Plataforma.SWITCH);
         plataformas3.add(Plataforma.DS);
