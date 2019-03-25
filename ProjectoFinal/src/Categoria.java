@@ -19,6 +19,7 @@ public enum Categoria {
   MMORPG("Massive Multiplayer Online Role Play Game"),
   COOPERATIVO("Cooperativo"),
   INDIE("Indie"),
+  OPENWORLD("Mundo abierto");
   
   private final String nombre;
       
