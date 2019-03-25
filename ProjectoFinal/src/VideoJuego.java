@@ -11,11 +11,17 @@ public class VideoJuego {
     private List<Plataforma> plataformas;
     private List<Categoria> categorias;
 
-    public VideoJuego(String titulo, String fechaLanzamiento, ArrayList<Plataforma> plataformas, Desarrolladora desarrolladora) {
+    public VideoJuego(String titulo, String fechaLanzamiento, ArrayList<Plataforma> plataformas, Desarrolladora desarrolladora, ArrayList<Categoria< categorias) {
         this.titulo = titulo;
         this.desarrolladora = desarrolladora;
         this.fechaLanzamiento = fechaLanzamiento;
         this.plataformas = plataformas;
+        this.categorias = categorias;
+    }
+    
+    
+    public Videojuego(String titulo, String fechaLanzamiento){
+        super(titulo,fechaLanzamiento,establecerPlataformas();,establecerDesarrolladora();,establecerCategorias(););
     }
 
     public List<Plataforma> getPlataformas() {
@@ -29,8 +35,12 @@ public class VideoJuego {
     public void setPlataformas(){
         this.plataformas = establecerPlataformas();
     }
-
-    public static ArrayList<Plataforma> establecerPlataformas() {
+    
+    public void setCategorias(){
+        this.categorias = establecerCategorias();
+    }
+    
+    public ArrayList<Plataforma> establecerPlataformas() {
         ArrayList<Plataforma> plataformas = new ArrayList<>();
         Plataforma respuesta;
         String titulo="Plataformas";
@@ -52,7 +62,7 @@ public class VideoJuego {
         return plataformas;
     }
 
-    public static Desarrolladora establecesDesarroladora(){
+    public Desarrolladora establecesDesarroladora(){
         Desarrolladora respuesta;
         String titulo="Desarrolladora";
         String mensaje="Introduce una Desarroladora: ";
@@ -66,5 +76,28 @@ public class VideoJuego {
                     Plataforma.values()[0]);
         }while(respuesta!=null);
         return respuesta;
+    }
+        
+    public establecerCategorias(){
+    ArrayList<Categoria> categorias = new ArrayList<Categoria>();
+    Categoria respuesta;
+    String titulo="Categorias";
+    String mensaje="Introduce una categoria";
+    do{
+        respuesta = (Categoria) JOptionPane.showInputDialog(null,
+                                mensaje,
+                                titulo,
+                                JOptionPane.YES_NO_CANCEL_OPTION,
+                                null,
+                                Categoria.values(),
+                                Categoria.values()[0]
+                                );
+        if(respuesta==null){
+            break;
+        } else {
+        categorias.add(respuesta);
+        }
+    }while(respuesta!=null);
+    return categorias;
     }
 }
