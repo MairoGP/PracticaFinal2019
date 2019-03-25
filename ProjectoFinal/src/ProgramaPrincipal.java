@@ -2,7 +2,9 @@ import java.util.ArrayList;
 
 public class ProgramaPrincipal {
     public static void main(String[] args) {
-
+        
+        List<VideoJuego> steam = new ArrayList<VideoJuego>();
+        
         ArrayList<Plataforma> plataformas1 = new ArrayList<Plataforma>();
         plataformas1.add(Plataforma.XBOXONE);
         plataformas1.add(Plataforma.PS4);
@@ -39,14 +41,20 @@ public class ProgramaPrincipal {
         categorias4.add(Categoria.AVENTURAS);
         categorias4.add(Categoria.MMO);
         
-        VideoJuego RDR2 = new VideoJuego("Red Dead Redemption 2","19/08/2005",plataformas1,Desarrolladora.ROCKSTAR);
-        VideoJuego DMC5 = new VideoJuego("Devil May Cry 5","19/08/2005",plataformas2,Desarrolladora.CAPCOM);
-        VideoJuego WOW = new VideoJuego("World of Warcraft","19/08/2005",plataformas3,Desarrolladora.BLZ);
-        VideoJuego SEKIRO = new VideoJuego("Sekiro","27/03/2019",plataformas4,Desarrolladora.ACTIVISION);
+        VideoJuego RDR2 = new VideoJuego("Red Dead Redemption 2","19/08/2005",plataformas1,Desarrolladora.ROCKSTAR,categorias1);
+        VideoJuego DMC5 = new VideoJuego("Devil May Cry 5","19/08/2005",plataformas2,Desarrolladora.CAPCOM,categorias2);
+        VideoJuego WOW = new VideoJuego("World of Warcraft","19/08/2005",plataformas3,Desarrolladora.BLZ,categorias3);
+        VideoJuego SEKIRO = new VideoJuego("Sekiro","27/03/2019",plataformas4,Desarrolladora.ACTIVISION,categorias4);
 
-
-
+        steam.add(RDR2);
+        steam.add(DMC5);
+        steam.add(WOW);
+        steam.add(MMO);
         
+        for (VideoJuego v
+             :steam){
+           System.out.println( v.toString());
+        }       
 
     }
 }
