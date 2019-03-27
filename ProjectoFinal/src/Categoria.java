@@ -26,4 +26,8 @@ public enum Categoria {
   Categoria(String s){
     this.nombre = s;
   }
+      
+  public String toString(){
+  return nombre;
+  }
 }
